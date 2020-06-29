@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //var str = "老师:请用小红 我的 朋友 造句。小亮: 小红是我的朋友。小然：朋友！小红是我的！";
+  //如果没有敏感词,就不修改
+  var str="you can you up,no can no bibi";
+  //先用match验证是否有几处敏感词
+  var arr = str.match(/小[\u4e00-\u9fa5]/g);
+  // 希望替换str中以小子开头的人名为**
+  var str2 = str.replace(/小[\u4e00-\u9fa5]/g,"**");
+  //且还要显示修改了几处
+  //如果match找到了敏感词,那么就可以正常输入arr的个数
+  /**
+  if(arr!=null){
+    console.log(`共替换了${arr.length}`)
+  }else{
+  //如果没有找到,就代替输入0处
+    console.log(`共替换了0处`)
+  }
+  */
+  console.log(`共替换了${arr!=null?arr.length:0}处`)
+</script>
+</body>
+</html>

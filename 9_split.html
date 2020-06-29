@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //要求: 将一个电子邮箱写个成用户名与域名
+  var Email = "1225021760@qq.com";
+  //按照@符号来切割
+  var arr = Email.split("@");
+  var uname = arr[0];
+  var domain = arr[1];
+  console.log(`用户名:${uname},域名:${domain}`);
+
+  //要求: 将一段英文单词写个多段子单词
+  var str = "you can you up";
+  //按照空格来切割
+  var arr = str.split(" ");
+  console.log(arr);
+
+  //要求: 如果一段英文单词中空格有多个,该怎么切
+  var str = "you can  you    up,no   can no bibi";
+  //按照正则来匹配多个空格
+  var arr = str.split(/\s+/);
+  console.log(arr);
+</script>
+</body>
+</html>

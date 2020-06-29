@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //要求:去除一个字符串中的前后空格
+  var str = "    hello    world    ";
+
+  //定义函数:去除前面空格
+  var trimLeft = (i)=>{
+    var str2 = i.replace(/^\s+/,"");
+    return str2;
+  }
+
+  //定义函数:去除后面空格
+  var trimRight = (i)=>{
+    var str3 = i.replace(/\s+$/,"");
+    return str3;
+  }
+
+  //定义函数:去除前面后面空格
+  var trim = (i)=>{
+    var str4 = i.replace(/^\s+|\s+$/g,"");
+    return str4;
+  }
+
+  //测试
+  console.log(trimLeft(str)); //打印结果: "hello    world    "
+  console.log(trimRight(str));//打印结果: "    hello    world"
+  console.log(trim(str));  //打印结果:  "hello    world"
+</script>
+</body>
+</html>

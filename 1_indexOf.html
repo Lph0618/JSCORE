@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //发送消息,验证是否有敏感词
+  var mgs = prompt("请输入要发送的消息");
+
+  //判断是否包含敏感词
+  var i = mgs.indexOf("卧槽");
+
+  //如果包含敏感词
+  if(i!=-1){
+    //就在页面上输入包含敏感词,禁止发送
+    document.write(`<h1 style="color:red">包含敏感词,禁止发送<h1>`)
+  }else{
+  //否则不包含
+    //就在页面上输入用户发送的内容
+    document.write(`<h1 style="color:green">发送信息:${mgs}</h1>`)
+  }
+</script>  
+</body>
+</html>

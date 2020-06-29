@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //要求:查找出每个单词的开头字母,且换成大写
+  var str = "you can you up";
+
+  //使用repalce替换,新值通过回调函数转大写
+  var arr = str.replace(/\b[a-z]/ig,i=>{
+    //打桩测试一下回调函数
+    console.log(`调用一次回调函数,参数=${i},替换成${i.toUpperCase()}`)
+    return i.toUpperCase();
+  })
+
+  //最后打印成 You Can You Up
+  console.log(arr)
+</script>
+</body>
+</html>
